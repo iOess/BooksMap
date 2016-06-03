@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell" rowHeight="100" id="KGk-i7-Jjw" customClass="CustomTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="99"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WaM-x2-qhz">
+                        <rect key="frame" x="82" y="72" width="210" height="19"/>
+                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7hI-th-4a0">
+                        <rect key="frame" x="82" y="8" width="220" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="7hI-th-4a0" secondAttribute="height" multiplier="55:16" id="cKZ-A7-3BK"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q6J-gU-pWC">
+                        <rect key="frame" x="8" y="8" width="61" height="83"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Q6J-gU-pWC" secondAttribute="height" multiplier="73:100" id="uEd-Co-Qqk"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Q6J-gU-pWC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="1Xp-4Q-K3H"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="7hI-th-4a0" secondAttribute="trailing" constant="-10" id="2cK-iT-NUi"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="WaM-x2-qhz" secondAttribute="trailing" id="3cJ-bm-Ehj"/>
+                    <constraint firstItem="WaM-x2-qhz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="9LB-em-AB6"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="WaM-x2-qhz" secondAttribute="bottom" id="FrA-je-9O4"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Q6J-gU-pWC" secondAttribute="bottom" id="VYA-kP-Qkk"/>
+                    <constraint firstItem="Q6J-gU-pWC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="fPH-Qy-G9s"/>
+                    <constraint firstItem="WaM-x2-qhz" firstAttribute="top" secondItem="7hI-th-4a0" secondAttribute="bottom" id="iG6-jq-XNj"/>
+                    <constraint firstItem="7hI-th-4a0" firstAttribute="leading" secondItem="Q6J-gU-pWC" secondAttribute="trailing" constant="13" id="ixU-B8-O6V"/>
+                    <constraint firstItem="7hI-th-4a0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="ovL-Cb-d31"/>
+                    <constraint firstItem="WaM-x2-qhz" firstAttribute="leading" secondItem="Q6J-gU-pWC" secondAttribute="trailing" constant="13" id="v7u-uT-7pn"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="9LB-em-AB6"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="authorLabel" destination="WaM-x2-qhz" id="F03-E1-7og"/>
+                <outlet property="image" destination="Q6J-gU-pWC" id="wIL-Pe-QYD"/>
+                <outlet property="titleLabel" destination="7hI-th-4a0" id="GT4-pH-MKh"/>
+            </connections>
+            <point key="canvasLocation" x="270" y="353"/>
+        </tableViewCell>
+    </objects>
+</document>
